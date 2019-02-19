@@ -1,0 +1,26 @@
+<div class="cab-list-wrap">
+	<div class="title">Select your vehicle</div>
+	<div>
+			<ion-card *ngFor="let driver of driversList">
+				<ion-item (click)="navigate()">
+					<ion-avatar><img src="assets/images/cab-alt.jpg"></ion-avatar>
+					<ion-label>
+						<span class="cab-name">Cabs Go</span>
+						<span class="cab-type">Share your ride</span>
+						<div class="rating">
+							<ion-icon name="star" color="warning"></ion-icon>
+							<ion-icon name="star" color="warning"></ion-icon>
+							<ion-icon name="star" color="warning"></ion-icon>
+							<ion-icon name="star-half" color="warning"></ion-icon>
+							<ion-icon name="star-outline" color="warning"></ion-icon>
+							4.5
+						</div>
+					</ion-label>
+					<span class="price">$25.49</span>
+				</ion-item>
+			</ion-card>
+		<ion-infinite-scroll (ionInfinite)="loadMore($event)" loadingSpinner="bubbles" loadingText="Loading Users...">
+			<ion-infinite-scroll-content></ion-infinite-scroll-content>
+		</ion-infinite-scroll>
+	</div>
+</div>

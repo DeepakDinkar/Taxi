@@ -1,0 +1,47 @@
+.cab-list-wrap {
+    background: #FFCA28;
+    height: 100%;
+    padding: 10% 0;
+}
+
+.sc-ion-card-md-h,
+.sc-ion-card-ios-h {
+    background: white;
+}
+
+.item.sc-ion-label-md-h,
+.item .sc-ion-label-md-h {
+    margin: 0;
+}
+
+.cab-name {
+    line-height: 10px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.cab-type {
+    display: block;
+    font-size: 12px;
+    position: relative;
+    left: 5px;
+    bottom: 4px;
+    color: gray;
+}
+
+.rating {
+    position: relative;
+    bottom: 5px;
+    left: 4px;
+}
+
+.price {
+    color: #00BCD4;
+}
+
+.title {
+    color: white;
+    font-size: 25px;
+    padding: 0 4%;
+}

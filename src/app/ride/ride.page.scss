@@ -1,0 +1,42 @@
+.ride-wrap {
+	height: 100%;
+	background: #2196f3;
+	color: white;
+	line-height: 45px;
+	padding: 15% 2%;
+}
+
+.title {
+	font-size: 40px;
+}
+
+.sub-title {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.sc-ion-card-md-h,
+.sc-ion-card-ios-h {
+	height: 155px;
+}
+
+.button-wrap {
+	padding: 0 3%;
+}
+
+ion-item.sc-ion-input-md-h:not(.item-label),
+ion-item:not(.item-label) .sc-ion-input-md-h {
+	color: gray;
+	position: relative;
+	bottom: 2px;
+}
+
+.native-input.sc-ion-input-md {
+	padding: 0 5px;
+}
+
+.search-wrap {
+	position: absolute;
+	width: 96%;
+	bottom: 10px;
+}

@@ -1,0 +1,28 @@
+<div class="ride-wrap">
+	<div class="title">Start your ride!</div>
+	<div class="sub-title"> Select your source and destination</div>
+	<ion-card>
+		<ion-content padding>
+			<ion-item>
+				<ion-input placeholder="Select your pickup point">
+					<ion-icon name="pin"></ion-icon>
+				</ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-input placeholder="Enter your Destination" padding-start="2px" [(ngModel)]="destination" (ionChange)="searchDestination($event)">
+					<ion-icon name="car"></ion-icon>
+				</ion-input>
+			</ion-item>
+		</ion-content>
+	</ion-card>
+	<div class="search-wrap" *ngIf="destinationLocations.length!==0">
+		<ion-card>
+			<ion-list>
+				<ion-item *ngFor="let destination of destinationLocations">{{destination.description}}</ion-item>
+			</ion-list>
+		</ion-card>
+	</div>
+	<div class="button-wrap">
+		<ion-button color="light" (click)="navigate()">Search For Cabs</ion-button>
+	</div>
+</div>

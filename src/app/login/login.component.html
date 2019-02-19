@@ -1,0 +1,23 @@
+<div class="login-wrap">
+	<div class="login-text">Login</div>
+	<ion-card>
+		<ion-card-content>
+				<ion-item>
+					<ion-label position="floating">User Name</ion-label>
+					<ion-input></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-label position="floating">Password</ion-label>
+					<ion-input type="password"></ion-input>
+				</ion-item>
+		</ion-card-content>
+	</ion-card>
+	<div class="login-button">
+		<ion-button color="primary" (click)="login()">Login</ion-button>
+		<div class="navigate-back" (click)="navigate()">
+			<ion-fab-button size="small" color="light">
+				<ion-icon name="arrow-round-back"></ion-icon>
+			</ion-fab-button>
+		</div>
+	</div>
+</div>

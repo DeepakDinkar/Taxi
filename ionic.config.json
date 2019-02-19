@@ -1,0 +1,8 @@
+{
+  "name": "cab",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "40d4243e"
+}
