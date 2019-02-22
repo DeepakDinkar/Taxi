@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
-
+import { RouterModule, Routes } from '@angular/router';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { IonicModule } from '@ionic/angular';
 
-import { MapPage } from './map.page';
 import { MapComponent } from './map.component';
+import { MapPage } from './map.page';
 
 const routes: Routes = [
   {
@@ -22,6 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [MapPage, MapComponent]
+  declarations: [MapPage, MapComponent],
+  providers: [Geolocation]
 })
 export class MapPageModule {}

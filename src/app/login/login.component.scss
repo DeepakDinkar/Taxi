@@ -11,12 +11,6 @@
 	color: white;
 }
 
-.sc-ion-card-md-h,
-.sc-ion-card-ios-h {
-	background: white;
-	height: 240px;
-}
-
 .login-button {
 	margin: 10px;
 }
@@ -26,4 +20,8 @@
 	float: right;
 	position: relative;
 	bottom: 5px;
+}
+
+.pwd-wrap {
+	margin-bottom: 45px;
 }

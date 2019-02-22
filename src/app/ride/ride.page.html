@@ -4,25 +4,36 @@
 	<ion-card>
 		<ion-content padding>
 			<ion-item>
-				<ion-input placeholder="Select your pickup point">
+				<span class="icon">
 					<ion-icon name="pin"></ion-icon>
+				</span>
+				<ion-input placeholder="Select your pickup point" [(ngModel)]="startingPoint" (ionChange)="searchStartPoint($event)">
 				</ion-input>
 			</ion-item>
 			<ion-item>
-				<ion-input placeholder="Enter your Destination" padding-start="2px" [(ngModel)]="destination" (ionChange)="searchDestination($event)">
+				<span class="icon">
 					<ion-icon name="car"></ion-icon>
+				</span>
+				<ion-input placeholder="Enter your Destination" padding-start="2px" [(ngModel)]="destination" (ionChange)="searchDestination($event)">
 				</ion-input>
 			</ion-item>
 		</ion-content>
 	</ion-card>
-	<div class="search-wrap" *ngIf="destinationLocations.length!==0">
+	<div class="search-wrap" *ngIf="destinationLocations.length!==0 && showSuggestion === 'Destination'" [ngStyle]="{'top': '240px'}">
 		<ion-card>
 			<ion-list>
-				<ion-item *ngFor="let destination of destinationLocations">{{destination.description}}</ion-item>
+				<ion-item *ngFor="let destination of destinationLocations" (click)="selectSuggestion(destination)">{{destination.description}}</ion-item>
+			</ion-list>
+		</ion-card>
+	</div>
+	<div class="search-wrap" *ngIf="startPointLocations.length!==0 && showSuggestion === 'StartingPoint'" [ngStyle]="{'top': '200px'}">
+		<ion-card>
+			<ion-list>
+				<ion-item *ngFor="let startingPoint of startPointLocations" (click)="selectSuggestion(startingPoint)">{{startingPoint.description}}</ion-item>
 			</ion-list>
 		</ion-card>
 	</div>
 	<div class="button-wrap">
-		<ion-button color="light" (click)="navigate()">Search For Cabs</ion-button>
+		<ion-button color="light" (click)="navigate()" [disabled]="destination!=='' && startingPoint!==''">Search For Cabs</ion-button>
 	</div>
 </div>

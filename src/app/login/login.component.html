@@ -1,23 +1,35 @@
 <div class="login-wrap">
+	<ion-progress-bar type="indeterminate" color="light" *ngIf="progressBar"></ion-progress-bar>
 	<div class="login-text">Login</div>
-	<ion-card>
-		<ion-card-content>
+	<form [formGroup]="loginGroup" (ngSubmit)="login(loginGroup.value)">
+		<ion-card>
+			<ion-card-content>
+				<div class="error center-text" *ngIf="invalidUser">Incorrect email/password</div>
 				<ion-item>
-					<ion-label position="floating">User Name</ion-label>
-					<ion-input></ion-input>
+					<ion-label position="floating">Email *</ion-label>
+					<ion-input required formControlName="email"></ion-input>
 				</ion-item>
-				<ion-item>
-					<ion-label position="floating">Password</ion-label>
-					<ion-input type="password"></ion-input>
-				</ion-item>
-		</ion-card-content>
-	</ion-card>
-	<div class="login-button">
-		<ion-button color="primary" (click)="login()">Login</ion-button>
-		<div class="navigate-back" (click)="navigate()">
-			<ion-fab-button size="small" color="light">
-				<ion-icon name="arrow-round-back"></ion-icon>
-			</ion-fab-button>
+				<div class="error" *ngIf="loginGroup.get('email').dirty && loginGroup.get('email').errors?.required">
+					Please enter user name</div>
+				<div class="error" *ngIf="loginGroup.get('email').dirty && loginGroup.get('email').errors?.email">
+					Invalid email format</div>
+				<div class="pwd-wrap">
+					<ion-item>
+						<ion-label position="floating">Password *</ion-label>
+						<ion-input type="password" required formControlName="password"></ion-input>
+					</ion-item>
+					<div class="error" *ngIf="loginGroup.get('password').dirty && loginGroup.get('password').errors?.required">
+						Please enter password</div>
+				</div>
+			</ion-card-content>
+		</ion-card>
+		<div class="login-button">
+			<ion-button color="primary" type="submit" [disabled]="loginGroup.invalid">Login </ion-button>
+			<div class="navigate-back" (click)="navigate()">
+				<ion-fab-button size="small" color="light">
+					<ion-icon name="arrow-round-back"></ion-icon>
+				</ion-fab-button>
+			</div>
 		</div>
-	</div>
+	</form>
 </div>

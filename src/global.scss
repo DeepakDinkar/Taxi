@@ -14,5 +14,20 @@
 	.fas {
 		font-family: "Font Awesome 5 Free" !important;
 	}
-	font-family: "Hind Guntur", sans-serif !important;
+
+	font-family: 'Hammersmith One',
+	sans-serif !important;
+}
+
+.error {
+	color: #f44336;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.sc-ion-card-md-h,
+.sc-ion-card-ios-h {
+	background: white;
 }

@@ -8,16 +8,27 @@
 
 .title {
 	font-size: 40px;
+	margin: 0 10px;
 }
 
 .sub-title {
 	font-size: 20px;
 	line-height: 30px;
+	margin: 0 12px;
 }
 
 .sc-ion-card-md-h,
 .sc-ion-card-ios-h {
 	height: 155px;
+}
+
+.search-wrap {
+
+	.sc-ion-card-md-h,
+	.sc-ion-card-ios-h {
+		overflow: auto;
+		box-shadow: 1px 1px 1px 1px white;
+	}
 }
 
 .button-wrap {
@@ -39,4 +50,11 @@ ion-item:not(.item-label) .sc-ion-input-md-h {
 	position: absolute;
 	width: 96%;
 	bottom: 10px;
+	z-index: 1;
+}
+
+.icon {
+	padding-right: 10px;
+	position: relative;
+	top: 2px;
 }

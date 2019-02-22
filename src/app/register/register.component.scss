@@ -17,12 +17,17 @@
 }
 
 .register-button {
-	margin: 10px;
+	margin: 10px 15px;
+    position: relative;
 }
 
 .navigate-back {
 	display: inline-block;
 	float: right;
 	position: relative;
-    bottom: 5px;
+	bottom: 5px;
+}
+
+.pwd-wrap {
+	margin-bottom: 45px;
 }

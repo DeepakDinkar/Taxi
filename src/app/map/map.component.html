@@ -1,25 +1,43 @@
-<ion-app>
-  <ion-split-pane>
-    <ion-menu>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
-                {{p.title}}
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <div> something</div>
-    <!-- <ion-router-outlet main></ion-router-outlet> -->
-  </ion-split-pane>
-</ion-app>
+<!--create a element for map. #Map - identifier -->
+<div #Map class="map"></div>
+<div class="driver-info">
+	<ion-card>
+		<ion-card-content>
+			<ion-item>
+				<ion-avatar><img src="assets/images/cab-alt.jpg"></ion-avatar>
+				<ion-label>
+					<span class="cab-name">Cabs Go</span>
+					<span class="call-driver">
+						<ion-button color="medium">Call Driver</ion-button>
+					</span>
+					<div class="rating">
+						<ion-icon name="star" color="warning"></ion-icon>
+						<ion-icon name="star" color="warning"></ion-icon>
+						<ion-icon name="star" color="warning"></ion-icon>
+						<ion-icon name="star" color="warning"></ion-icon>
+						<ion-icon name="star-half" color="warning"></ion-icon>
+						<span class="rating-text">4.5</span>
+					</div>
+				</ion-label>
+			</ion-item>
+			<table>
+				<thead>
+					<tr>
+						<th>Distance</th>
+						<th>Price</th>
+						<th>ETA</th>
+						<th>Payment</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>3.5 Km</td>
+						<td>$24.49</td>
+						<td>12:34</td>
+						<td>Cash</td>
+					</tr>
+				</tbody>
+			</table>
+		</ion-card-content>
+	</ion-card>
+</div>
