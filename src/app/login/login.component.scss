@@ -1,27 +1,37 @@
 .login-wrap {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background: #4CAF50;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #e0e0de;
 }
 
 .login-text {
-	font-size: 35px;
-	margin: 25px 12px 0;
-	color: white;
+  font-size: 35px;
+  color: white;
+  background: #4caf50;
+  height: 16%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 8%;
 }
 
 .login-button {
-	margin: 10px;
+  margin: 10px;
 }
 
 .navigate-back {
-	display: inline-block;
-	float: right;
-	position: relative;
-	bottom: 5px;
+  display: inline-block;
+  float: right;
+  position: relative;
+  bottom: 5px;
 }
 
 .pwd-wrap {
-	margin-bottom: 45px;
+  margin-bottom: 45px;
+}
+
+.login-logo {
+  width: 200px;
+  margin:auto;
+  margin-left:17%;
 }

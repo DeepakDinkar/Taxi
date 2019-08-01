@@ -18,18 +18,23 @@
 						<ion-label position="floating">Password *</ion-label>
 						<ion-input type="password" required formControlName="password"></ion-input>
 					</ion-item>
-					<div class="error" *ngIf="loginGroup.get('password').dirty && loginGroup.get('password').errors?.required">
+					<div class="error"
+						*ngIf="loginGroup.get('password').dirty && loginGroup.get('password').errors?.required">
 						Please enter password</div>
+				</div>
+				<div class="login-button">
+					<ion-button color="primary" type="submit" [disabled]="loginGroup.invalid">Login </ion-button>
+					<div class="navigate-back" (click)="navigate()">
+						<ion-fab-button size="small" color="light">
+							<ion-icon name="arrow-round-back"></ion-icon>
+						</ion-fab-button>
+					</div>
+				</div>
+				<div>
+				<img src="assets/images/login.png" class="login-logo">
 				</div>
 			</ion-card-content>
 		</ion-card>
-		<div class="login-button">
-			<ion-button color="primary" type="submit" [disabled]="loginGroup.invalid">Login </ion-button>
-			<div class="navigate-back" (click)="navigate()">
-				<ion-fab-button size="small" color="light">
-					<ion-icon name="arrow-round-back"></ion-icon>
-				</ion-fab-button>
-			</div>
-		</div>
+
 	</form>
 </div>

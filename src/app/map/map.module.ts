@@ -9,20 +9,20 @@ import { MapComponent } from './map.component';
 import { MapPage } from './map.page';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: MapComponent
-  }
+    {
+        path: '',
+        component: MapComponent
+    }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes)
-  ],
-  declarations: [MapPage, MapComponent],
-  providers: [Geolocation]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        RouterModule.forChild(routes)
+    ],
+    declarations: [MapPage, MapComponent],
+    providers: [Geolocation]
 })
-export class MapPageModule {}
+export class MapPageModule { }

@@ -7,33 +7,41 @@
 				<span class="icon">
 					<ion-icon name="pin"></ion-icon>
 				</span>
-				<ion-input placeholder="Select your pickup point" [(ngModel)]="startingPoint" (ionChange)="searchStartPoint($event)">
+				<ion-input placeholder="Select your pickup point" [(ngModel)]="startingPoint"
+					(ionChange)="searchStartPoint($event)">
 				</ion-input>
 			</ion-item>
 			<ion-item>
 				<span class="icon">
 					<ion-icon name="car"></ion-icon>
 				</span>
-				<ion-input placeholder="Enter your Destination" padding-start="2px" [(ngModel)]="destination" (ionChange)="searchDestination($event)">
+				<ion-input placeholder="Enter your Destination" padding-start="2px" [(ngModel)]="destination"
+					(ionChange)="searchDestination($event)">
 				</ion-input>
 			</ion-item>
+			<div class="button-wrap">
+				<ion-button color="medium" (click)="navigate()" [disabled]="destination =='' && startingPoint ==''">Search For
+					Cabs</ion-button>
+					<img src="assets/images/choose-ride.png" class="start-ride-logo">
+			</div>
 		</ion-content>
 	</ion-card>
-	<div class="search-wrap" *ngIf="destinationLocations.length!==0 && showSuggestion === 'Destination'" [ngStyle]="{'top': '240px'}">
+	<div class="search-wrap" *ngIf="locations.length!==0 && showSuggestion === 'Destination'"
+		[ngStyle]="{'top': '240px'}">
 		<ion-card>
 			<ion-list>
-				<ion-item *ngFor="let destination of destinationLocations" (click)="selectSuggestion(destination)">{{destination.description}}</ion-item>
+				<ion-item *ngFor="let destination of locations" (click)="selectSuggestion(destination)">
+					{{destination.name}}</ion-item>
 			</ion-list>
 		</ion-card>
 	</div>
-	<div class="search-wrap" *ngIf="startPointLocations.length!==0 && showSuggestion === 'StartingPoint'" [ngStyle]="{'top': '200px'}">
+	<div class="search-wrap" *ngIf="locations.length!==0 && showSuggestion === 'StartingPoint'"
+		[ngStyle]="{'top': '200px'}">
 		<ion-card>
 			<ion-list>
-				<ion-item *ngFor="let startingPoint of startPointLocations" (click)="selectSuggestion(startingPoint)">{{startingPoint.description}}</ion-item>
+				<ion-item *ngFor="let startingPoint of locations" (click)="selectSuggestion(startingPoint)">
+					{{startingPoint.name}}</ion-item>
 			</ion-list>
 		</ion-card>
-	</div>
-	<div class="button-wrap">
-		<ion-button color="light" (click)="navigate()" [disabled]="destination!=='' && startingPoint!==''">Search For Cabs</ion-button>
 	</div>
 </div>

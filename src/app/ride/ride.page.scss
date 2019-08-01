@@ -3,7 +3,7 @@
 	background: #2196f3;
 	color: white;
 	line-height: 45px;
-	padding: 15% 2%;
+	padding: 10% 2%;
 }
 
 .title {
@@ -12,14 +12,16 @@
 }
 
 .sub-title {
-	font-size: 20px;
-	line-height: 30px;
-	margin: 0 12px;
+	font-size: 15px;
+    line-height: 20px;
+    margin: 0 12px;
 }
 
 .sc-ion-card-md-h,
 .sc-ion-card-ios-h {
-	height: 155px;
+	height: 75%;
+    position: relative;
+    top: 10px;
 }
 
 .search-wrap {
@@ -27,12 +29,12 @@
 	.sc-ion-card-md-h,
 	.sc-ion-card-ios-h {
 		overflow: auto;
-		box-shadow: 1px 1px 1px 1px white;
 	}
 }
 
 .button-wrap {
 	padding: 0 3%;
+	text-align: center;
 }
 
 ion-item.sc-ion-input-md-h:not(.item-label),
@@ -46,6 +48,10 @@ ion-item:not(.item-label) .sc-ion-input-md-h {
 	padding: 0 5px;
 }
 
+.start-ride-logo {
+	width: 200px;
+	margin: auto;
+}
 .search-wrap {
 	position: absolute;
 	width: 96%;
@@ -57,4 +63,8 @@ ion-item:not(.item-label) .sc-ion-input-md-h {
 	padding-right: 10px;
 	position: relative;
 	top: 2px;
+}
+
+.item {
+	margin: 10px 0;
 }

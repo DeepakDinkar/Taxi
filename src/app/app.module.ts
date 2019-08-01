@@ -12,14 +12,14 @@ import { MapPipe } from './map.pipe';
 
 
 @NgModule({
-	declarations: [AppComponent, MapPipe],
-	entryComponents: [],
-	imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FirebaseModule],
-	providers: [
-		StatusBar,
-		SplashScreen,
-		{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-	],
-	bootstrap: [AppComponent]
+    declarations: [AppComponent, MapPipe],
+    entryComponents: [],
+    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FirebaseModule],
+    providers: [
+        StatusBar,
+        SplashScreen,
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

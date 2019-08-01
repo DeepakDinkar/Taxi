@@ -11,13 +11,15 @@
 					<ion-label position="floating">User Name *</ion-label>
 					<ion-input formControlName="userName"></ion-input>
 				</ion-item>
-				<div class="error" *ngIf="registerGroup.get('userName').dirty && registerGroup.get('userName').errors?.required">
+				<div class="error"
+					*ngIf="registerGroup.get('userName').dirty && registerGroup.get('userName').errors?.required">
 					Please enter User Name</div>
 				<ion-item>
 					<ion-label position="floating">Email *</ion-label>
 					<ion-input formControlName="email"></ion-input>
 				</ion-item>
-				<div class="error" *ngIf="registerGroup.get('email').dirty && registerGroup.get('email').errors?.required">
+				<div class="error"
+					*ngIf="registerGroup.get('email').dirty && registerGroup.get('email').errors?.required">
 					Please enter user name</div>
 				<div class="error" *ngIf="registerGroup.get('email').dirty && registerGroup.get('email').errors?.email">
 					Invalid email format</div>
@@ -25,33 +27,37 @@
 					<ion-label position="floating">Password *</ion-label>
 					<ion-input type="password" formControlName="password"></ion-input>
 				</ion-item>
-				<div class="error" *ngIf="registerGroup.get('password').dirty && registerGroup.get('password').errors?.required">
+				<div class="error"
+					*ngIf="registerGroup.get('password').dirty && registerGroup.get('password').errors?.required">
 					Please enter password</div>
 				<ion-item>
 					<ion-label position="floating">Re-enter Password *</ion-label>
 					<ion-input type="password" formControlName="reEnterPassword"></ion-input>
 				</ion-item>
-				<div class="error" *ngIf="registerGroup.get('reEnterPassword').dirty && registerGroup.get('reEnterPassword').errors?.required">
+				<div class="error"
+					*ngIf="registerGroup.get('reEnterPassword').dirty && registerGroup.get('reEnterPassword').errors?.required">
 					Please re-enter password</div>
-				<div class="error" *ngIf="registerGroup.get('reEnterPassword').dirty && registerGroup.get('reEnterPassword').errors?.mismatch">
+				<div class="error"
+					*ngIf="registerGroup.get('reEnterPassword').dirty && registerGroup.get('reEnterPassword').errors?.mismatch">
 					Password Mismatch</div>
 				<div class="pwd-wrap">
 					<ion-item>
 						<ion-label position="floating">Phone Number *</ion-label>
 						<ion-input type="number" formControlName="phoneNumber"></ion-input>
 					</ion-item>
-					<div class="error" *ngIf="registerGroup.get('phoneNumber').dirty && registerGroup.get('phoneNumber').errors?.required">
+					<div class="error"
+						*ngIf="registerGroup.get('phoneNumber').dirty && registerGroup.get('phoneNumber').errors?.required">
 						Please enter password</div>
+				</div>
+				<div class="register-button">
+					<ion-button color="warning" [disabled]="registerGroup.invalid" type="submit">Register</ion-button>
+					<div class="navigate-back" (click)="navigate()">
+						<ion-fab-button size="small" color="light">
+							<ion-icon name="arrow-round-back"></ion-icon>
+						</ion-fab-button>
+					</div>
 				</div>
 			</ion-card-content>
 		</ion-card>
-		<div class="register-button">
-			<ion-button color="warning" [disabled]="registerGroup.invalid" type="submit">Register</ion-button>
-			<div class="navigate-back" (click)="navigate()">
-				<ion-fab-button size="small" color="light">
-					<ion-icon name="arrow-round-back"></ion-icon>
-				</ion-fab-button>
-			</div>
-		</div>
 	</form>
 </div>

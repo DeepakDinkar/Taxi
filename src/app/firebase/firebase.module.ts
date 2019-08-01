@@ -6,13 +6,13 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    AngularFireDatabaseModule
-  ],
-  exports: []
+    declarations: [],
+    imports: [
+        CommonModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireAuthModule,
+        AngularFireDatabaseModule
+    ],
+    exports: []
 })
 export class FirebaseModule { }
